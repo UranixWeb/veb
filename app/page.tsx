@@ -61,7 +61,7 @@ export default function Page() {
         setWarning("Automatické přihlašování...")
 
         try {
-          const res = await fetch('/api/route.ts', {
+          const res = await fetch('/api', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
@@ -104,7 +104,7 @@ export default function Page() {
     const action = "login"
 
     try {
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, action }),
@@ -155,7 +155,7 @@ export default function Page() {
     const action = "register"
 
     try {
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, action, level, doCheck }),
@@ -197,7 +197,7 @@ export default function Page() {
     const createdBy = currentUsername;
     const action = "addPost";
 
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ label, p1, p2, p3, p4, p5, createdBy, action }),
@@ -230,7 +230,7 @@ export default function Page() {
     const action = "getPosts";
 
     try {
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action }),
@@ -277,7 +277,7 @@ export default function Page() {
     console.log({ label, vsichni, lisak, kroko, bidlo, mungo, bushman, tobias, createdBy, action })
 
     try {
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ label, vsichni, lisak, kroko, bidlo, mungo, bushman, tobias, createdBy, action }),
@@ -312,7 +312,7 @@ export default function Page() {
     const action = "deletePost";
 
     try {
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, action }),
@@ -360,7 +360,7 @@ export default function Page() {
       const action = "updatePost";
   
       try {
-        const res = await fetch('/api/route.ts', {
+        const res = await fetch('/api', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id, label, p1, p2, p3, p4, p5, action }),
@@ -394,7 +394,7 @@ export default function Page() {
     setVareni([])
     const action = "getVareni";
     try {
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action }),
@@ -420,7 +420,7 @@ export default function Page() {
     const action = "checkUser";
     const username = currentUsername;
     try {
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action, username }),
@@ -437,7 +437,7 @@ export default function Page() {
     const action = "getCheckList";
     setCheckList([])
     try {
-      const res = await fetch('/api/route.ts', {
+      const res = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action }),
