@@ -47,7 +47,7 @@ export default function Page() {
     } else if (status === "viewCheckList") {
       getCheckList();
     }
-  });
+  }, [status]);
 
 //---// Funkce pro automatické přihlašování uživatelů //---//
 
