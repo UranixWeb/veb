@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ff0000;
 }
 
 @theme inline {
@@ -22,5 +23,711 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, 'Segoe UI', sans-serif;
+}
+
+#userbar {
+  display: flex;
+  justify-content: right;
+  align-items: top;
+  padding: 10px;
+  gap: 10px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+#adminbar {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#logged {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid var(--foreground);
+  border-radius: 20px;
+  padding: 7px;
+  justify-content: center;
+  background-color: var(--background);
+}
+
+#warning {
+  font-weight: 900;
+}
+
+#login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#formlogin, #formregister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: var(--background);
+  border: 5px solid rgb(129, 0, 0);
+
+}
+
+#formlogin h1, #formregister h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  min-width: 300px;
+}
+
+#formlogin label, #formregister label {
+  font-size: 18px;
+  text-align: center;
+}
+
+button[type="submit"] {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--foreground);
+  color: var(--background);
+  cursor: pointer;
+}
+
+#remember {
+  color: var(--background);
+  font-weight: 900;
+}
+
+input#username, input#password {
+  background: transparent;
+  border: 2px solid var(--foreground);
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--foreground);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--foreground);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--foreground);
+  background: transparent;
+}
+
+#login-container {
+  background: #7d0000;
+  background: radial-gradient(circle, rgba(125, 0, 0, 1) 0%, rgba(3, 0, 0, 1) 100%);
+}
+
+div#warning {
+  text-align: center;
+}
+
+svg#user {
+  width: 50px;
+  height: 50px;
+  fill: var(--foreground);
+  align-self: center;
+}
+
+#back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 10000px;
+}
+
+#backsvg {
+  width: 50px;
+  height: 50px;
+  fill: var(--foreground);
+  background-color: transparent;
+}
+
+#adduser, #addpost {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid var(--foreground);
+  border-radius: 20px;
+  padding: 7px;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--foreground);
+}
+
+#adduser svg, #addpost svg {
+  width: 32px;
+  fill: var(--background);
+  align-self: center;
+}
+
+#addpost {
+  right: 300px;
+}
+
+#main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: url("./../public/header.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  padding: 150px 20px;
+  position: relative;
+}
+
+#main-header h1 {
+  font-size: clamp(3.5rem, 6vw, 6.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  line-height: 0.95;
+  margin: 0;
+  padding: 0 0.25rem;
+  background: linear-gradient(120deg, rgb(255, 30, 30) 47%, rgb(255, 150, 0) 47%, rgb(255, 150, 0) 50%, rgb(255, 30, 30) 50%);
+  background-size: 300% 100%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 22px rgba(255, 0, 0, 0.24), 0 16px 36px rgba(0, 0, 0, 0.55);
+  position: relative;
+  z-index: 1;
+  animation: gradientMove 7s infinite;
+  animation-timing-function: linear;
+}
+
+#main-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 100% 50%;
+  }
+  80% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(0, 0, 0), rgba(255, 0, 0, 0) 30%);
+}
+
+.posts-container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background-color: var(--background);
+  border: 2px solid var(--foreground);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.post-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.post-card p {
+  font-size: 16px;
+}
+
+.post-card h4 {
+  font-size: 16px;
+  color: rgb(143, 0, 0);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.admin-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-direction: row;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.admin-buttons svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--foreground);
+  cursor: pointer;
+}
+
+#alert {
+  width: 20px;
+  height: 20px;
+  fill: rgb(255, 0, 0);
+}
+
+#vareni-alert-done {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: black;
+  border: 2px solid rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  fill: rgb(255, 0, 0);
+  margin: 0 20 0 20;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#vareni-alert-done svg {
+  width: 20px;
+  height: 20px;
+}
+
+#vareni-alert-done button {
+  background: red;
+  border-radius: 10px;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+  fill: black;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+#vareni-alert-done div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+#vareni-alert-unchecked {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: black;
+  border: 2px solid rgb(255, 180, 0);
+  color: rgb(255, 180, 0);
+  fill: rgb(255, 180, 0);
+  margin: 0 20 0 20;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#vareni-alert-unchecked svg {
+  width: 20px;
+  height: 20px;
+}
+
+#vareni-alert-unchecked button {
+  background: rgb(255, 180, 0);
+  border-radius: 10px;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+  fill: black;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+#vareni-alert-unchecked div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+#formregister {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#formregister option {
+  background-color: var(--background);
+  color: var(--foreground);
+  outline: none;
+}
+
+#formregister select {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+#formregister select:focus {
+  outline: none;
+  border-color: var(--foreground);
+}
+
+#formregister input {
+  background: transparent;
+  border: 2px solid var(--foreground);
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--foreground);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#formpost {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: var(--background);
+  border: 5px solid rgb(129, 0, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+#formpost h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.vareni-card {
+  background-color: var(--background);
+  border: 2px solid var(--foreground);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+}
+
+.vareni-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 70 10 70;
+}
+
+.vareni-card p {
+  font-size: 16px;
+}
+
+.vareni-card h4 {
+  font-size: 16px;
+  color: rgb(143, 0, 0);
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+#check-button {
+  background: rgb(255, 180, 0);
+  border-radius: 10px;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+  fill: black;
+  padding: 5px;
+}
+
+#checked-button {
+  background: rgb(176, 0, 0);
+  border-radius: 10px;
+  color: black;
+  font-weight: 900;
+  fill: black;
+  padding: 5px;
+}
+
+.vareni-card-yellow {
+  background-color: var(--background);
+  border: 2px solid rgb(255, 180, 0);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  color: rgb(255, 180, 0);
+  fill: rgb(255, 180, 0);
+  transition: all 0.3s ease;
+}
+
+.vareni-card-yellow h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 70 10 70;
+}
+
+.vareni-card-yellow p {
+  font-size: 16px;
+}
+
+.vareni-card-yellow h4 {
+  font-size: 16px;
+  color: rgb(255, 180, 0);
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.vareni-card-green {
+  background-color: var(--background);
+  border: 2px solid rgb(0, 255, 0);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  color: rgb(0, 255, 0);
+  fill: rgb(0, 255, 0);
+}
+
+.vareni-card-green h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 70px 10px 70px;
+}
+
+.vareni-card-green p {
+  font-size: 16px;
+}
+
+.vareni-card-green #backsvg {
+  fill: rgb(0, 255, 0);
+}
+
+#login-container-green {
+  background: radial-gradient(circle, rgba(0, 125, 0, 1) 0%, rgba(3, 0, 0, 1) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+#login-container-yellow {
+  background: rgb(125, 67, 0);
+  background: radial-gradient(circle, rgb(125, 67, 0) 0%, rgba(3, 0, 0, 1) 100%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+#backsvg-yellow {
+  fill: rgb(255, 180, 0);
+  width: 50px;
+  height: 50px;
+}
+
+.vareni-form {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.vareni-form h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.vareni-form input {
+  background: transparent;
+  border: 2px solid rgb(172, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.vareni-form input:focus {
+  outline: none;
+  border-color: rgb(255, 0, 0);
+}
+
+.vareni-form button {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(255, 0, 0);
+  color: black;
+  cursor: pointer;
+  fill: black;
+}
+
+.vareni-form #label-text {
+  color: rgb(255, 0, 0);
+  font-weight: 900;
+}
+
+.vareni-form #label {
+  color: rgb(255, 0, 0);
+  font-weight: 900;
+  border: 5px solid rgb(255, 0, 0);
+}
+
+#checked-user-true {
+  color: rgb(0, 255, 0);
+  font-weight: 900;
+  fill: rgb(0, 255, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#checked-user-false {
+  color: rgb(255, 0, 0);
+  font-weight: 900;
+  fill: rgb(255, 0, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#user-check-svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+#back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+#back #backsvg {
+  width: 50px;
+  height: 50px;
+  fill: red;
+  background-color: transparent;
+}
+
+#add-post {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background-color: red;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+#add-post svg {
+  width: 40px;
+  height: 40px;
+  fill: black;
+  background-color: transparent;
+}
+
+.vareni-card-green #backsvg {
+  fill: rgb(0, 255, 0);
 }

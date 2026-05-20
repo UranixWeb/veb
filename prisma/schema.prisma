@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  username  String    @unique
+  password  String
+  level     String    @default("user")
+  checked   Boolean   @default(false)
+  doCheck   Boolean   @default(false)
+}
+
+model Post {
+  id        Int       @id @default(autoincrement())
+  label     String
+  p1        String
+  p2        String?
+  p3        String?
+  p4        String?
+  p5        String?
+  createdBy String
+  createdAt DateTime  @default(now())
+}
+
+model Vareni {
+  id        Int       @id @default(autoincrement())
+  label     String
+  vsichni   String?
+  lisak     String    @default("Nejde - nevíme")
+  kroko     String    @default("Nejde - nevíme")
+  bidlo     String    @default("Nejde - nevíme")
+  mungo     String    @default("Nejde - nevíme")
+  bushman   String    @default("Nejde - nevíme")
+  tobias    String    @default("Nejde - nevíme")
+  createdAt DateTime  @default(now())
+  createdBy String
+}
