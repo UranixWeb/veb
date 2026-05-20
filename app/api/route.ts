@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma' // viz soubor lib/prisma.ts
-import { error } from 'console'
-import { json } from 'stream/consumers'
+/* eslint-disable  @typescript-eslint/no-unused-vars */
 
-// POST /api – vytvoření uživatele
+import { NextResponse } from 'next/server'
+import { prisma } from '@/lib/prisma'
+import { error } from 'console'
+
 export async function POST(req: Request) {
     const body = await req.json()
     const { id, username, password, level, action, label, p1, p2, p3, p4, p5, createdBy, vsichni, lisak, kroko, bidlo, mungo, bushman, tobias, doCheck } = body
