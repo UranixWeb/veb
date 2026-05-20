@@ -9,7 +9,6 @@ export async function POST(req: Request) {
     const { id, username, password, level, action, label, p1, p2, p3, p4, p5, createdBy, vsichni, lisak, kroko, bidlo, mungo, bushman, tobias, doCheck } = body
   
   
-
   if (action === "login") {
     try { 
     if (!username || !password) {
@@ -21,12 +20,12 @@ export async function POST(req: Request) {
         username: username,
       },
     })
-
+    if (user === null) {} else {
     if (user.password === password) {
     return NextResponse.json(user, { status: 201 })
   } else {
     return NextResponse.json({ error: "Špatné jméno nebo heslo"}, { status: 400})
-  }
+  }}
   } catch {
     console.error(error)
     return NextResponse.json({ error: "Nesprávné jméno nebo heslo"}, { status: 400})
