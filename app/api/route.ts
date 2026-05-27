@@ -20,7 +20,9 @@ export async function POST(req: Request) {
         username: username,
       },
     })
-    if (user === null) {} else {
+    if (user === null) {
+      return NextResponse.json("")
+    } else {
     if (user.password === password) {
     return NextResponse.json(user, { status: 201 })
   } else {

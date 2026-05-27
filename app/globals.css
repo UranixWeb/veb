@@ -7,8 +7,8 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: black;
+  --color-foreground: red;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -21,8 +21,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: black;
+  color: red;
   font-family: Poppins, 'Segoe UI', sans-serif;
 }
 
@@ -48,11 +48,11 @@ body {
 #logged {
   display: flex;
   flex-direction: column;
-  border: 4px solid var(--foreground);
+  border: 4px solid red;
   border-radius: 20px;
   padding: 7px;
   justify-content: center;
-  background-color: var(--background);
+  background-color: black;
 }
 
 #warning {
@@ -72,7 +72,7 @@ body {
   gap: 10px;
   padding: 50px;
   border-radius: 20px;
-  background-color: var(--background);
+  background-color: black;
   border: 5px solid rgb(129, 0, 0);
 
 }
@@ -95,33 +95,33 @@ button[type="submit"] {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: var(--foreground);
-  color: var(--background);
+  background-color: red;
+  color: black;
   cursor: pointer;
 }
 
 #remember {
-  color: var(--background);
+  color: black;
   font-weight: 900;
 }
 
 input#username, input#password {
   background: transparent;
-  border: 2px solid var(--foreground);
+  border: 2px solid red;
   border-radius: 5px;
   padding: 10px;
-  color: var(--foreground);
+  color: red;
   margin-bottom: 10px;
   text-align: center;
 }
 
 input:focus {
   outline: none;
-  border-color: var(--foreground);
+  border-color: red;
 }
 
 input[type="checkbox"] {
-  accent-color: var(--foreground);
+  accent-color: red;
   background: transparent;
 }
 
@@ -137,7 +137,7 @@ div#warning {
 svg#user {
   width: 50px;
   height: 50px;
-  fill: var(--foreground);
+  fill: red;
   align-self: center;
 }
 
@@ -159,25 +159,25 @@ svg#user {
 #backsvg {
   width: 50px;
   height: 50px;
-  fill: var(--foreground);
+  fill: red;
   background-color: transparent;
 }
 
 #adduser, #addpost {
   display: flex;
   flex-direction: column;
-  border: 4px solid var(--foreground);
+  border: 4px solid red;
   border-radius: 20px;
   padding: 7px;
   justify-content: center;
   width: 100%;
   cursor: pointer;
-  background-color: var(--foreground);
+  background-color: red;
 }
 
 #adduser svg, #addpost svg {
   width: 32px;
-  fill: var(--background);
+  fill: black;
   align-self: center;
 }
 
@@ -199,9 +199,9 @@ svg#user {
 
 #main-header h1 {
   font-size: clamp(3.5rem, 6vw, 6.6rem);
-  font-weight: 900;
+  font-weight: 1000;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   line-height: 0.95;
   margin: 0;
   padding: 0 0.25rem;
@@ -254,8 +254,8 @@ svg#user {
 }
 
 .post-card {
-  background-color: var(--background);
-  border: 2px solid var(--foreground);
+  background-color: black;
+  border: 2px solid red;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -294,7 +294,7 @@ svg#user {
 .admin-buttons svg {
   width: 30px;
   height: 30px;
-  fill: var(--foreground);
+  fill: red;
   cursor: pointer;
 }
 
@@ -396,15 +396,15 @@ svg#user {
 }
 
 #formregister option {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: black;
+  color: red;
   outline: none;
 }
 
 #formregister select {
-  background-color: var(--background);
-  color: var(--foreground);
-  border: 2px solid var(--foreground);
+  background-color: black;
+  color: red;
+  border: 2px solid red;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
@@ -412,15 +412,15 @@ svg#user {
 
 #formregister select:focus {
   outline: none;
-  border-color: var(--foreground);
+  border-color: red;
 }
 
 #formregister input {
   background: transparent;
-  border: 2px solid var(--foreground);
+  border: 2px solid red;
   border-radius: 5px;
   padding: 10px;
-  color: var(--foreground);
+  color: red;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -431,7 +431,7 @@ svg#user {
   gap: 10px;
   padding: 50px;
   border-radius: 20px;
-  background-color: var(--background);
+  background-color: black;
   border: 5px solid rgb(129, 0, 0);
   position: absolute;
   top: 50%;
@@ -449,8 +449,8 @@ svg#user {
 }
 
 .vareni-card {
-  background-color: var(--background);
-  border: 2px solid var(--foreground);
+  background-color: black;
+  border: 2px solid red;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -502,7 +502,7 @@ svg#user {
 }
 
 .vareni-card-yellow {
-  background-color: var(--background);
+  background-color: black;
   border: 2px solid rgb(255, 180, 0);
   border-radius: 10px;
   padding: 20px;
@@ -539,7 +539,7 @@ svg#user {
 }
 
 .vareni-card-green {
-  background-color: var(--background);
+  background-color: black;
   border: 2px solid rgb(0, 255, 0);
   border-radius: 10px;
   padding: 20px;
@@ -566,7 +566,7 @@ svg#user {
   font-size: 16px;
 }
 
-.vareni-card-green #backsvg {
+.vareni-card-green #back #backsvg {
   fill: rgb(0, 255, 0);
 }
 
@@ -728,6 +728,6 @@ svg#user {
   background-color: transparent;
 }
 
-.vareni-card-green #backsvg {
+.vareni-card-green #back #backsvg {
   fill: rgb(0, 255, 0);
 }
